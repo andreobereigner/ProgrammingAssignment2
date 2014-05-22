@@ -18,21 +18,21 @@ makeCacheMatrix <- function(x = matrix()) {
   originalMatrix <- x
   inversedMatrix <- NULL
   
-  # Define the setter method and stores the original matrix
+  # Define the setter method and store the original matrix
   set <- function(y) {
     originalMatrix <<- y
     inversedMatrix <<- NULL
   }
   
-  # Define the getter method and returns the original matrix
+  # Define the getter method and return the original matrix
   get <- function() originalMatrix
   
-  # Define the setter method and sets the inversed matrix
+  # Define the setter method and store the inversed matrix
   setInverseMatrix <- function(inverseMatrix) {
     inversedMatrix <<- inverseMatrix
   }
   
-  # Defines the getter method and returns the inversed matrix
+  # Defines the getter method and return the inversed matrix
   getInverseMatrix <- function() inversedMatrix
   
   list(set = set, get = get, setInverseMatrix = setInverseMatrix, getInverseMatrix = getInverseMatrix)
